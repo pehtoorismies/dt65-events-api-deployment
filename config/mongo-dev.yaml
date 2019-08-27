@@ -1,0 +1,67 @@
+image:
+  ## Bitnami MongoDB registry
+  ##
+  registry: docker.io
+  ## Bitnami MongoDB image name
+  ##
+  repository: bitnami/mongodb
+  ## Bitnami MongoDB image tag
+  ## ref: https://hub.docker.com/r/bitnami/mongodb/tags/
+  ##
+  tag: 4.0.12-debian-9-r5
+  ## Specify a imagePullPolicy
+  ## ref: http://kubernetes.io/docs/user-guide/images/#pre-pulling-images
+  ##
+
+replicaSet:
+  ## Whether to create a MongoDB replica set for high availability or not
+  enabled: false
+
+# mongodbRootPassword:
+
+## MongoDB custom user and database
+## ref: https://github.com/bitnami/bitnami-docker-mongodb/blob/master/README.md#creating-a-user-and-database-on-first-run
+##
+# mongodbUsername: dt65_dev
+# mongodbPassword: password
+mongodbDatabase: dt65_dev
+
+
+resources: 
+  limits:
+    cpu: 100m
+    memory: 512Mi
+  requests:
+    cpu: 50m
+    memory: 256Mi
+
+  persistence:
+    enabled: true
+    ## A manually managed Persistent Volume and Claim
+    ## Requires persistence.enabled: true
+    ## If defined, PVC must be created manually before volume will be bound
+    ##
+    # existingClaim:
+
+    ## The path the volume will be mounted at, useful when using different
+    ## MongoDB images.
+    ##
+    mountPath: /bitnami/mongodb
+
+    ## The subdirectory of the volume to mount to, useful in dev environments
+    ## and one PV for multiple services.
+    ##
+    subPath: ""
+
+    ## mongodb data Persistent Volume Storage Class
+    ## If defined, storageClassName: <storageClass>
+    ## If set to "-", storageClassName: "", which disables dynamic provisioning
+    ## If undefined (the default) or set to null, no storageClassName spec is
+    ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
+    ##   GKE, AWS & OpenStack)
+    ##
+    storageClass: "do-block-storage"
+    accessModes:
+      - ReadWriteOnce
+    size: 4Gi
+    annotations: {}

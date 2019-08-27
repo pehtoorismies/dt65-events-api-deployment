@@ -1,0 +1,26 @@
+# namePrefix: prod-
+
+# commonLabels:
+#   app: prod-dt65
+
+# generatorOptions:
+#   # labels to add to all generated resources
+#   labels:
+#     kustomize.generated.resources: prod-dt65
+#   # annotations to add to all generated resources
+#   annotations:
+#     kustomize.generated.resource: prod-dt65
+
+# configMapGenerator:
+#   - name: dt65-config
+#     literals:
+#       - authDomain="dt65.eu.auth0.com"
+#       - jwtAudience="https://api.downtown65.com"
+
+# patchesStrategicMerge:
+#   - patch-sealed-secrets.yaml
+
+# resources:
+#   - ./../../base
+#   - namespace.yaml
+#   - sealed-secrets.yaml

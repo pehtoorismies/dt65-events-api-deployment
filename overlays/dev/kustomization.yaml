@@ -1,0 +1,28 @@
+commonLabels:
+  app: dev-dt65
+
+generatorOptions:
+  # labels to add to all generated resources
+  labels:
+    kustomize.generated.resources: dev-dt65
+  # annotations to add to all generated resources
+  annotations:
+    kustomize.generated.resource: dev-dt65
+
+configMapGenerator:
+  - name: dt65-config
+    literals:
+      - authDomain="dev-dt65.eu.auth0.com"
+      - jwtAudience="https://graphql-dev.downtown65.com"
+
+namespace: development
+
+images:
+  - name: pehtoorismies/dt65-events-api
+    newName: pehtoorismies/dt65-events-api
+    newTag: hevonen
+
+resources:
+  - ./../../base
+  - namespace.yaml
+  - sealed-secrets.yaml

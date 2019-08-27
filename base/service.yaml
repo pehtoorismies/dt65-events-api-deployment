@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: dt65-events-api-service
+spec:
+  selector:
+    deployment: dt65-events-api
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 4001
+      targetPort: graphql
