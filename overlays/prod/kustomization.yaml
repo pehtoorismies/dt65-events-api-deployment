@@ -15,6 +15,8 @@ configMapGenerator:
       - authDomain="prod-dt65.eu.auth0.com"
       - jwtAudience="https://api.downtown65.com"
 
+namespace: development
+
 resources:
   - ./../../base
   - namespace.yaml
