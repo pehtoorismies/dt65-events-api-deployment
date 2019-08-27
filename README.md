@@ -15,7 +15,13 @@ kubectl apply -f config/namespaces.yaml
 # development
 helm install mongo stable/mongodb \
     -n development \
-    -f mongodb/values-dev.yaml \
+    -f config/mongo-dev.yaml \
+    --set mongodbRootPassword=<secret>,mongodbUsername=<secret>,mongodbPassword=<secret>
+
+# production
+helm install mongo stable/mongodb \
+    -n production \
+    -f config/mongo-prod.yaml \
     --set mongodbRootPassword=<secret>,mongodbUsername=<secret>,mongodbPassword=<secret>
 ```
 
