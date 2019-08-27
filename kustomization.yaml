@@ -1,5 +1,3 @@
 resources:
   - ./overlays/dev
-  # - ./prod
-
-# namePrefix: k8s-
+  - ./overlays/prod
