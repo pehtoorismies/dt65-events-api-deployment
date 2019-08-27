@@ -14,7 +14,6 @@ configMapGenerator:
     literals:
       - authDomain="dev-dt65.eu.auth0.com"
       - jwtAudience="https://graphql-dev.downtown65.com"
-      - test=testValue
 
 namespace: development
 

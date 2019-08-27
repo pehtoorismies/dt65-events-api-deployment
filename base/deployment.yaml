@@ -22,8 +22,6 @@ spec:
               path: /graphql?query={readiness}
               port: graphql
           env:
-            - name: TEST_FLUX
-              value: "Hello Flux"
             - name: AUTH_DOMAIN
               valueFrom:
                 configMapKeyRef:
