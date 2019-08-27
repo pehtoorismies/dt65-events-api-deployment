@@ -15,9 +15,6 @@ configMapGenerator:
       - authDomain="prod-dt65.eu.auth0.com"
       - jwtAudience="https://api.downtown65.com"
 
-patchesStrategicMerge:
-  - patch-sealed-secrets.yaml
-
 resources:
   - ./../../base
   - namespace.yaml

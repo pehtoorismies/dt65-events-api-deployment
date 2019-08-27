@@ -17,11 +17,6 @@ configMapGenerator:
 
 namespace: development
 
-# images:
-#   - name: pehtoorismies/dt65-events-api
-#     newName: pehtoorismies/dt65-events-api
-#     newTag: hevonen
-
 resources:
   - ./../../base
   - namespace.yaml
