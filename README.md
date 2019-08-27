@@ -48,15 +48,8 @@ Test creation
 kustomize build > temp.yaml
 ```
 
-FLUX
+## Install Flux
 
 ```
-export GHUSER="YOURUSER"
-fluxctl install \
---git-user=${GHUSER} \
---git-email=${GHUSER}@users.noreply.github.com \
---git-url=git@github.com:${GHUSER}/dt65-events-api-deployment \
---manifest-generation=true \
---namespace=flux > temp2.yaml
-
+kustomize build config/fluxcd
 ```
