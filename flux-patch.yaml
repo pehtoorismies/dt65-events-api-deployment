@@ -4,6 +4,7 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
+    fluxcd.io/tag.dt65-events-api: glob:master-*
   name: dt65-events-api
   namespace: development
 spec:
