@@ -1,23 +1,27 @@
 commonLabels:
-  app: prod-dt65
+  app: dev-dt65
 
 generatorOptions:
   # labels to add to all generated resources
   labels:
-    kustomize.generated.resources: prod-dt65
+    kustomize.generated.resources: dev-dt65
   # annotations to add to all generated resources
   annotations:
-    kustomize.generated.resource: prod-dt65
+    kustomize.generated.resource: dev-dt65
 
 configMapGenerator:
   - name: dt65-config
     literals:
-      - authDomain="prod-dt65.eu.auth0.com"
-      - jwtAudience="https://api.downtown65.com"
+      - authDomain="dev-dt65.eu.auth0.com"
+      - jwtAudience="https://graphql-dev.downtown65.com"
 
-namespace: production
+namespace: development
+
+# patchesStrategicMerge:
+#   - flux-patch.yaml
 
 resources:
   - ./../../base
   - namespace.yaml
   - sealed-secrets.yaml
+# 

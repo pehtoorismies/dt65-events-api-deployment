@@ -6,7 +6,7 @@ metadata:
     flux.weave.works/automated: "true"
     flux.weave.works/tag.dt65-events-api: glob:production:*
   name: dt65-events-api
-  namespace: prodution
+  namespace: production
 spec:
   template:
     spec:
