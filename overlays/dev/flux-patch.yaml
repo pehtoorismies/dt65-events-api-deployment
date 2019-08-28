@@ -4,12 +4,12 @@ kind: Deployment
 metadata:
   annotations:
     flux.weave.works/automated: "true"
-    flux.weave.works/tag.dt65-events-api: glob:master
+    flux.weave.works/tag.dt65-events-api: glob:master:*
   name: dt65-events-api
   namespace: development
 spec:
   template:
     spec:
       containers:
-        - image: pehtoorismies/dt65-events-api:master
+        - image: pehtoorismies/dt65-events-api:master-9956649
           name: dt65-events-api
