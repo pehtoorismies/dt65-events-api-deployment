@@ -6,3 +6,11 @@ metadata:
     fluxcd.io/automated: "true"
   name: dt65-events-api
   namespace: development
+spec:
+  template:
+    spec:
+      $setElementOrder/containers:
+      - name: dt65-events-api
+      containers:
+      - image: pehtoorismies/dt65-events-api:production-9956649
+        name: dt65-events-api
