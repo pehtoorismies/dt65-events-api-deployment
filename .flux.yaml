@@ -12,9 +12,4 @@ commandUpdated:
           mv new-flux-patch.yaml overlays/$FLUX_WL_NS/flux-patch.yaml
       policy:
         command: >-
-          pwd
-          ls -la
-          cat overlays/$FLUX_WL_NS/flux-patch.yaml |
-          kubeyaml annotate --namespace $FLUX_WL_NS --kind $FLUX_WL_KIND --name $FLUX_WL_NAME "fluxcd.io/$FLUX_POLICY=$FLUX_POLICY_VALUE"
-          > new-flux-patch.yaml &&
-          mv new-flux-patch.yaml overlays/$FLUX_WL_NS/flux-patch.yaml
+          pwd && ls -la
