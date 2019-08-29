@@ -5,6 +5,10 @@ metadata:
 spec:
   replicas: 1
   template:
+    metadata:
+      name: dt65-events-api
+      labels:
+        app: dt65-events-api
     spec:
       containers:
         - name: dt65-events-api

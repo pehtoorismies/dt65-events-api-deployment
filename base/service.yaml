@@ -4,9 +4,9 @@ metadata:
   name: dt65-events-api-service
 spec:
   selector:
-    deployment: dt65-events-api
+    app: dt65-events-api
   type: ClusterIP
   ports:
     - protocol: TCP
       port: 4001
-      targetPort: 4000
+      targetPort: graphql

@@ -1,5 +1,5 @@
 commonLabels:
-  app: dev-dt65
+  env: development
 
 generatorOptions:
   # labels to add to all generated resources

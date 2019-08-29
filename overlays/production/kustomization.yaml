@@ -1,5 +1,5 @@
 commonLabels:
-  app: prod-dt65
+  env: production
 
 generatorOptions:
   # labels to add to all generated resources
