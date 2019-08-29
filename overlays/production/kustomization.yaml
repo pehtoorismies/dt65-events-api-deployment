@@ -17,6 +17,10 @@ configMapGenerator:
 
 namespace: production
 
+replicas:
+- name: dt65-events-api
+  count: 2
+
 patches:
   - path: flux-patch.yaml
     target:
