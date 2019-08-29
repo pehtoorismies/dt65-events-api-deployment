@@ -18,5 +18,5 @@ commandUpdated:
       #     mv new-flux-patch.yaml overlays/$FLUX_WL_NS/flux-patch.yaml
       policy:
         command: >-
-          ls -la overlays/$FLUX_WL_NS > test.txt
-          
+          echo $FLUX_WL_NS $FLUX_WL_KIND $FLUX_WL_NAME $FLUX_POLICY $FLUX_POLICY_VALUE > test.txt &&
+          cat overlays/$FLUX_WL_NS/flux-patch.yaml > test.yaml
