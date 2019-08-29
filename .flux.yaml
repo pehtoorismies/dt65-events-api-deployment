@@ -16,7 +16,3 @@ commandUpdated:
           kubeyaml annotate --namespace $FLUX_WL_NS --kind $FLUX_WL_KIND --name $FLUX_WL_NAME "fluxcd.io/$FLUX_POLICY=$FLUX_POLICY_VALUE"
           > new-flux-patch.yaml &&
           mv new-flux-patch.yaml overlays/$FLUX_WL_NS/flux-patch.yaml
-      # policy:
-      #   command: >-
-      #     echo $FLUX_WL_NS $FLUX_WL_KIND $FLUX_WL_NAME $FLUX_POLICY $FLUX_POLICY_VALUE > test.txt &&
-      #     cat overlays/$FLUX_WL_NS/flux-patch.yaml > test.yaml
