@@ -18,5 +18,5 @@ commandUpdated:
       #     mv new-flux-patch.yaml overlays/$FLUX_WL_NS/flux-patch.yaml
       policy:
         command: >-
-          pwd > pwd.txt && ls > ls.txt && echo $FLUX_WL_NS > ns.txt
+          ls -la overlays/$FLUX_WL_NS > test.txt
           
