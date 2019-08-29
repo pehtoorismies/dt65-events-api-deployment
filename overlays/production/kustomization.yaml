@@ -29,6 +29,14 @@ patches:
       kind: Deployment
       name: dt65-events-api
 
+patchesJson6902:
+  - path: ingress-patch.yaml 
+    target:
+      group: extensions
+      version: v1beta1
+      kind: Ingress
+      name: dt65-events-api
+
 resources:
   - ./../../base
   - namespace.yaml

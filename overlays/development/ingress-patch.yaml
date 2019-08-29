@@ -1,0 +1,4 @@
+- op: replace
+  path: /spec/rules/0/host
+  value: "graphql-api-dev.downtown65.com"
+    

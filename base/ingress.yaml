@@ -1,0 +1,16 @@
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: dt65-events-api
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: replace.me.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: dt65-events-api-service
+          servicePort: 4001

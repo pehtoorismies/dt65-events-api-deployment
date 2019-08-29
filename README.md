@@ -45,7 +45,6 @@ Create secret
 ./createSealed.sh dev
 ```
 
-
 ## Install Kustomize
 
 
@@ -59,3 +58,7 @@ kustomize build > temp.yaml
 ```
 kustomize build config/fluxcd
 ```
+
+## Install Nginx Ingress Controller
+
+Follow instructions: https://kubernetes.github.io/ingress-nginx/deploy/
