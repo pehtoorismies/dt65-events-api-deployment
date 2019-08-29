@@ -1,0 +1,1 @@
+{"jobID":"07dec016-1e4c-2a0e-ba7e-0b859299170b","spec":{"type":"policy","cause":{"Message":"","User":"pehtoorismies \u003cpehtoorismies@gmail.com\u003e"},"spec":{"development:deployment/dt65-events-api":{"add":{"tag_all":"glob:master-*"},"remove":{}}}},"result":null}
