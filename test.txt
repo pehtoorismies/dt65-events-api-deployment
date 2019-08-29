@@ -1,0 +1,7 @@
+total 24
+drwxr-xr-x    2 root     root          4096 Aug 29 05:30 .
+drwxr-xr-x    4 root     root          4096 Aug 29 05:30 ..
+-rw-r--r--    1 root     root           325 Aug 29 05:30 flux-patch.yaml
+-rw-r--r--    1 root     root           650 Aug 29 05:30 kustomization.yaml
+-rw-r--r--    1 root     root            60 Aug 29 05:30 namespace.yaml
+-rw-r--r--    1 root     root          2698 Aug 29 05:30 sealed-secrets.yaml
