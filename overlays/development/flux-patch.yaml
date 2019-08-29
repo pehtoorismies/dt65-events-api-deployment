@@ -1,11 +1,11 @@
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    flux.weave.works/automated: "true"
-    flux.weave.works/tag.dt65-events-api: glob:master:*
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.dt65-events-api: glob:master:*
   name: dt65-events-api
+  namespace: development
 spec:
   template:
     spec:
