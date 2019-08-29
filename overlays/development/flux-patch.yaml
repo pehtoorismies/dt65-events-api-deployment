@@ -1,14 +1,15 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.dt65-events-api: glob:master:*
+    fluxcd.io/tag.dt65-events-api: glob:master:1*
   name: dt65-events-api
   namespace: development
 spec:
   template:
     spec:
       containers:
-        - image: pehtoorismies/dt65-events-api:master-9956649
-          name: dt65-events-api
+      - image: pehtoorismies/dt65-events-api:master-9956649
+        name: dt65-events-api
