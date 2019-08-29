@@ -3,13 +3,13 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    flux.weave.works/automated: "true"
-    flux.weave.works/tag.dt65-events-api: glob:production:*
+    fluxcd.io/automated: "true"
+    fluxcd.io/tag.dt65-events-api: glob:production-*
   name: dt65-events-api
   namespace: production
 spec:
   template:
     spec:
       containers:
-        - image: pehtoorismies/dt65-events-api:prodution-9956649
-          name: dt65-events-api
+      - image: pehtoorismies/dt65-events-api:production-9956649
+        name: dt65-events-api

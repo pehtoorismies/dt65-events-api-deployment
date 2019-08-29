@@ -17,8 +17,13 @@ configMapGenerator:
 
 namespace: production
 
-patchesStrategicMerge:
-  - flux-patch.yaml
+patches:
+  - path: flux-patch.yaml
+    target:
+      group: apps
+      version: v1
+      kind: Deployment
+      name: dt65-events-api
 
 resources:
   - ./../../base
