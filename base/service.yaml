@@ -9,4 +9,4 @@ spec:
   ports:
     - protocol: TCP
       port: 4001
-      targetPort: graphql
+      targetPort: 4000
