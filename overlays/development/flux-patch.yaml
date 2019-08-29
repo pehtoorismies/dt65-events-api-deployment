@@ -4,12 +4,12 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/automated: "true"
-    fluxcd.io/tag.dt65-events-api: glob:master:*
+    fluxcd.io/tag.dt65-events-api: glob:master-*
   name: dt65-events-api
   namespace: development
 spec:
   template:
     spec:
       containers:
-      - image: pehtoorismies/dt65-events-api:master-9956649
+      - image: pehtoorismies/dt65-events-api:master-4ac3fda
         name: dt65-events-api
