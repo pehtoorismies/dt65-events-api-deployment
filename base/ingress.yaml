@@ -4,6 +4,7 @@ metadata:
   name: dt65-events-api
   annotations:
     kubernetes.io/ingress.class: "nginx"
+    certmanager.k8s.io/issuer: "letsencrypt-issuer"
 spec:
   tls:
     - hosts:
