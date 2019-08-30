@@ -1,4 +1,3 @@
-
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
@@ -6,11 +5,15 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: "nginx"
 spec:
+  tls:
+    - hosts:
+        - replace.me.com
+      secretName: tls-secret
   rules:
-  - host: replace.me.com
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: dt65-events-api-service
-          servicePort: 4001
+    - host: replace.me.com
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: dt65-events-api-service
+              servicePort: 4001
