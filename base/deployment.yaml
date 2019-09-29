@@ -36,6 +36,21 @@ spec:
                 configMapKeyRef:
                   name: dt65-config
                   key: jwtAudience
+            - name: CLIENT_DOMAIN
+              valueFrom:
+                configMapKeyRef:
+                  name: dt65-config
+                  key: clientDomain
+            - name: MAILGUN_DOMAIN
+              valueFrom:
+                configMapKeyRef:
+                  name: dt65-config
+                  key: mailgunDomain
+            - name: MAILGUN_FROM
+              valueFrom:
+                configMapKeyRef:
+                  name: dt65-config
+                  key: mailgunFrom
             - name: AUTH_CLIENT_ID
               valueFrom:
                 secretKeyRef:
@@ -51,3 +66,8 @@ spec:
                 secretKeyRef:
                   name: dt65-secret
                   key: mongoUrl
+            - name: MAILGUN_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: dt65-secret
+                  key: mailgunApiKey

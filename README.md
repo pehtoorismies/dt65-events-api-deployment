@@ -41,8 +41,10 @@ kubeseal --fetch-cert > ss-cert.pem
 
 Create secret
 
+Put secret in .env.dev or .env.prod
+
 ```
-./createSealed.sh dev
+./createSealed.sh dev | prod
 ```
 
 ## Install Kustomize

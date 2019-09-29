@@ -30,13 +30,15 @@ checkFile "$PROPS_PROD"
 
 
 if [ "$1" = "dev" ]; then
-    echo "Create production values"
+    echo "Create dev values"
     PROPS=.env.dev
-    SS_DIR=overlays/dev
+    SS_DIR=overlays/development
+    NS=development
     elif [ "$1" = "prod" ]; then
-    echo "Create development values"
+    echo "Create production values"
     PROPS=.env.prod
-    SS_DIR=overlays/prod
+    SS_DIR=overlays/production
+    NS=production
 else
     helpFunction
 fi;
@@ -44,7 +46,7 @@ fi;
 SOME_TEMP=$(mktemp -d)
 mkdir -p $SOME_TEMP
 
-kubectl create secret generic dt65-secret --from-env-file=$PROPS --dry-run -o yaml > $SOME_TEMP/secret.yaml
+kubectl create secret generic dt65-secret -n $NS --from-env-file=$PROPS --dry-run -o yaml > $SOME_TEMP/secret.yaml
 kubeseal --format yaml --cert ss-cert.pem <$SOME_TEMP/secret.yaml >$SS_DIR/sealed-secrets.yaml
 
 rm -r $SOME_TEMP
