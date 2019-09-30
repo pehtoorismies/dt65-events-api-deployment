@@ -15,7 +15,8 @@ configMapGenerator:
       - authDomain="dev-dt65.eu.auth0.com"
       - jwtAudience="https://graphql-dev.downtown65.com"
       - clientDomain="https://dev.downtown65.events"
-      - mailgunDomain="https://api.eu.mailgun.net/v3/mailgun.downtown65.com"
+      - mailgunDomain="mailgun.downtown65.com"
+      - mailgunHost="api.eu.mailgun.net"
       - mailgunFrom="Kyttäki <hello@downtown65.com>"
 namespace: development
 

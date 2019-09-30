@@ -46,6 +46,11 @@ spec:
                 configMapKeyRef:
                   name: dt65-config
                   key: mailgunDomain
+            - name: MAILGUN_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: dt65-config
+                  key: mailgunHost
             - name: MAILGUN_FROM
               valueFrom:
                 configMapKeyRef:
