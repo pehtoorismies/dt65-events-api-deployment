@@ -49,5 +49,8 @@ mkdir -p $SOME_TEMP
 kubectl create secret generic dt65-secret -n $NS --from-env-file=$PROPS --dry-run -o yaml > $SOME_TEMP/secret.yaml
 kubeseal --format yaml --cert ss-cert.pem <$SOME_TEMP/secret.yaml >$SS_DIR/sealed-secrets.yaml
 
+kubectl create secret generic gce-secret -n $NS --from-file=service_account_key=gce-storage-service-account.json --dry-run -o yaml > $SOME_TEMP/gce-secret.yaml
+kubeseal --format yaml --cert ss-cert.pem <$SOME_TEMP/gce-secret.yaml >$SS_DIR/sealed-secrets-gce.yaml
+
 rm -r $SOME_TEMP
 echo "SealedSecret created"
