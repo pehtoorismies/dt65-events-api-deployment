@@ -18,7 +18,6 @@ configMapGenerator:
       - mailgunDomain="mailgun.downtown65.com"
       - mailgunHost="api.eu.mailgun.net"
       - mailgunFrom="Kyttäki <hello@downtown65.com>"
-      - mongoHost="production"
 namespace: production
 
 replicas:
@@ -45,3 +44,4 @@ resources:
   - ./../../base
   - namespace.yaml
   - sealed-secrets.yaml
+  - sealed-secrets-gce.yaml
