@@ -13,7 +13,7 @@ configMapGenerator:
   - name: dt65-config
     literals:
       - authDomain="prod-dt65.eu.auth0.com"
-      - jwtAudience="https://api.downtown65.com"
+      - jwtAudience="https://graphql-api.downtown65.com/"
       - clientDomain="https://www.downtown65.events"
       - mailgunDomain="mailgun.downtown65.com"
       - mailgunHost="api.eu.mailgun.net"
