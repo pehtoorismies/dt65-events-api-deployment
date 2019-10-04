@@ -76,3 +76,8 @@ spec:
                 secretKeyRef:
                   name: dt65-secret
                   key: mailgunApiKey
+            - name: REGISTER_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: dt65-secret
+                  key: registerSecret
