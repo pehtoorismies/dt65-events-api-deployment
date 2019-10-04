@@ -6,3 +6,4 @@ resources:
   - service.yaml
   - ingress.yaml
   - issuer.yaml
+  - cron-mongodump.yaml

@@ -27,6 +27,12 @@ patches:
       version: v1
       kind: Deployment
       name: dt65-events-api
+  - path: mongodump-cron-patch.yaml
+    target:
+      group: batch
+      version: v1beta1
+      kind: CronJob
+      name: mongodump
 
 patchesJson6902:
   - path: ingress-patch.yaml 
