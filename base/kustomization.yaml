@@ -7,3 +7,4 @@ resources:
   - ingress.yaml
   - issuer.yaml
   - cron-mongodump.yaml
+  - cron-weekly-email.yaml
