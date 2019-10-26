@@ -11,5 +11,5 @@ spec:
   template:
     spec:
       containers:
-      - image: pehtoorismies/dt65-events-api:master-9d0e0c7
+      - image: pehtoorismies/dt65-events-api:master-eba686e
         name: dt65-events-api
