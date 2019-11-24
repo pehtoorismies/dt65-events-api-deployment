@@ -3,7 +3,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    fluxcd.io/automated: "true"
     fluxcd.io/tag.dt65-events-api: glob:production-*
   name: dt65-events-api
   namespace: production
