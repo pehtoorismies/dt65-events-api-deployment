@@ -1,0 +1,1 @@
+{"jobID":"20327fce-9d95-ecdf-befb-c1533eb1c927","spec":{"type":"policy","cause":{"Message":"","User":"pehtoorismies \u003cpehtoorismies@gmail.com\u003e"},"spec":{"production:deployment/dt65-events-api":{"add":{"automated":"true"},"remove":{}}}},"result":null}
