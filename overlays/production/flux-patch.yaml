@@ -4,6 +4,7 @@ kind: Deployment
 metadata:
   annotations:
     fluxcd.io/tag.dt65-events-api: glob:production-*
+    fluxcd.io/automated: 'true'
   name: dt65-events-api
   namespace: production
 spec:
