@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: dt65-events-api-ingress
+  namespace: development
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-issuer
+spec:
+  tls:
+    - hosts:
+        - graphql-api-dev.downtown65.events
+      secretName: api-tls
+  rules:
+    - host: "graphql-api-dev.downtown65.events"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: dt65-events-api-service
+                port:
+                  number: 4001
