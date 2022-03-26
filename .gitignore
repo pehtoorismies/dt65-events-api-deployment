@@ -4,3 +4,4 @@
 dist/
 temp*
 gce-storage-service-account.json
+.idea
